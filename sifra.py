@@ -2,7 +2,7 @@ abeceda="abcdefghijklmnopqrstuvwxyz"
 zprava = input("Zadej zpravu: ")
 posun = input("(Zadej kladne cislo, sifra se posouva v abecede doprava)\no kolik pozic abecedy chcete zpravu posunout:")
 zasifrovane =""
-def zasifruj(text, posun):
+def zasifruj(zprava, posun):
     # TODO (A): posuň každé písmeno o 'posun' míst dopředu
     for i in range(len(zprava)):
         index = 0
