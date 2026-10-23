@@ -38,7 +38,7 @@ def desifruj(text, posun):
             
     return desifrovany_text
 
-
+#Zmena na input pro zadani textu a posunu
 zprava = input("Zadej text: ")
 posun = int(input("Zadej posun: "))
 tajne = zasifruj(zprava, posun)
