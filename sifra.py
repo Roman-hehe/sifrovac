@@ -1,10 +1,30 @@
+abeceda="abcdefghijklmnopqrstuvwxyz"
+zprava = input("Zadej zpravu: ")
+posun = input("(Zadej kladne cislo, sifra se posouva v abecede doprava)\no kolik pozic abecedy chcete zpravu posunout:")
+zasifrovane =""
 def zasifruj(text, posun):
     # TODO (A): posuň každé písmeno o 'posun' míst dopředu
+    for i in range(len(zprava)):
+        index = 0
+        znak = zprava[i].lower()
+        if znak == " ":
+            zasifrovane = zasifrovane + " "
+        for j in range(len(abeceda)):
+            if znak == abeceda[j]:
+                index = j + posun
+                while index >= 26:
+                    index = index - 26
+                zasifrovane = zasifrovane + abeceda[index]
+                break
+            
+            
+    return(zasifrovane)
+
     return text
 
 
 def desifruj(text, posun):
-    # TODO (B): posuň každé písmeno o 'posun' míst dozadu
+    #TODO (B): posuň každé písmeno o 'posun' míst dozadu
     return text
 
 
