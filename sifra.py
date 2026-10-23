@@ -20,8 +20,6 @@ def zasifruj(text, posun):
             
     return(zasifrovane)
 
-    return text
-
 
 def desifruj(text, posun):
     #TODO (B): posuň každé písmeno o 'posun' míst dozadu
