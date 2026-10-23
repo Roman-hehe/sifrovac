@@ -4,19 +4,20 @@ def zasifruj(text, posun):
 
 
 def desifruj(text, posun):
-    abeceda="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    abeceda = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     interkpunkce = ".,!?-;:()[]' "
     desifrovany_text = ""
-    if pismeno in interkpunkce:
-        desifrovany_text += pismeno
+    
     for pismeno in text:
         if pismeno in abeceda:
             index = abeceda.index(pismeno)
             novy_index = (index - posun) % len(abeceda)
             desifrovany_text += abeceda[novy_index]
+        elif pismeno in interkpunkce:
+            desifrovany_text += pismeno
         else:
             desifrovany_text += pismeno
-    # TODO (B): posuň každé písmeno o 'posun' míst dozadu
+            
     return desifrovany_text
 
 
