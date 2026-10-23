@@ -39,7 +39,8 @@ def desifruj(text, posun):
     return desifrovany_text
 
 
-zprava = "ahoj svete"
-tajne = zasifruj(zprava, 3)
+zprava = input("Zadej text: ")
+posun = int(input("Zadej posun: "))
+tajne = zasifruj(zprava, posun)
 print("Zasifrovano:", tajne)
-print("Desifrovano:", desifruj(tajne, 3))
+print("Desifrovano:", desifruj(tajne, posun))
